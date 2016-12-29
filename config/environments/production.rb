@@ -83,4 +83,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  Giphy::Configuration.configure do |config|
+  config.version = THE_API_VERSION
+  config.api_key = YOUR_API_KEY
+end
 end
