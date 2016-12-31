@@ -1,9 +1,9 @@
 Rails.application.configure do
 
-  Giphy::Configuration.configure do |config|
-    config.version = "1"
-    config.api_key = "dc6zaTOxFJmzC"
-  end
+  # Giphy::Configuration.configure do |config|
+  #   config.version = "1"
+  #   config.api_key = "dc6zaTOxFJmzC"
+  # end
 
   # Settings specified here will take precedence over those in config/application.rb.
 

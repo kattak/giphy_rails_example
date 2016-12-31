@@ -3,7 +3,9 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-  #  p Giphy.random
+    # rand = Giphy.random
+    # @url = rand.image_url
+    # p rand
   end
 
   # GET /posts/1
@@ -23,7 +25,22 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    p "*" * 50
+    p post_params["title"]
+    p "*" * 50
+
+    @term = post_params["title"]
+    rand = Giphy.random(@term)
+    @url = rand.image_url
+    p "url" * 50
+    p @url #<URI::HTTP http://media1.giphy.com/media/50MbNzWwcf5f2/giphy.gif>
+    p "url" * 50
+
+
+    #Just testing if an ivar gets sent through
+    @hi = "hi"
     @post = Post.new(post_params)
+    @post.title = @url 
 
     respond_to do |format|
       if @post.save
