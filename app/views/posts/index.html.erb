@@ -2,7 +2,7 @@
 
 <h1>Organsmasher's Anonymous Posts</h1>
 
-<p>Display random gif from Giphy API</p>
+<!-- <p>Display random gif from Giphy API</p> -->
 <!-- <img src="<%=@url%>" alt=""> -->
 
 <h4>Leave me a post...</h4>
@@ -20,7 +20,7 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.title %></td>
+        <td><a href = "<%= post.title %>"><%= post.title %></a></td>
         <td><%= post.text %></td>
         <td><%= post.name %></td>
         <td><%= link_to 'Show', post %></td>
